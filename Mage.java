@@ -12,8 +12,4 @@ class Mage extends GameCharacter {
     public void specialMove() {
         System.out.println(name + " uses Lightning Storm!");
     }
-
-   // public void secretPower(){
-   //     System.out.println(name + " uses utot");
-   // }
 }
