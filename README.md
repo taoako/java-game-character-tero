@@ -38,5 +38,11 @@ Merlin unleashes the Secret Power: Utot 💨!!!
 - Abstract classes/interfaces define the **rules**.
 - Subclasses provide the **details**.
 - Our game example makes it clear:
+
   - `GameCharacter` = abstract base
   - `Warrior`, `Mage` = concrete implementations
+
+  ## Screenshots
+
+  ![alt text](image.png)
+  ![alt text](image-1.png)
