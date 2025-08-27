@@ -1,16 +1,15 @@
+import javax.swing.JOptionPane;
+
 public class Main {
     public static void main(String[] args) {
-        GameCharacter warrior = new Warrior("Brader");
-        GameCharacter mage = new Mage("GabMids");
+   
+        String mageName = JOptionPane.showInputDialog("Enter Mage's name:");
+        String warriorName = JOptionPane.showInputDialog("Enter Warrior's name:");
 
-        warrior.showName();
-        warrior.attack();
-        warrior.specialMove();
+        GameCharacter mage = new Mage(mageName);
+        GameCharacter warrior = new Warrior(warriorName);
 
-        System.out.println();
-
-        mage.showName();
-        mage.attack();
-        mage.specialMove();
+        BattleSystem battle = new BattleSystem(mage, warrior);
+        battle.startBattle();
     }
 }

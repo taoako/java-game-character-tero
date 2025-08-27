@@ -1,16 +1,28 @@
+
+import javax.swing.JOptionPane;
+
 abstract class GameCharacter {
     String name;
+    int hp;
+    int attackDamage;
+    int specialDamage;
 
-    public GameCharacter(String name) {
+    public GameCharacter(String name, int hp, int attackDamage, int specialDamage) {
         this.name = name;
+        this.hp = hp;
+        this.attackDamage = attackDamage;
+        this.specialDamage = specialDamage;
     }
 
-    // Abstract methods (must be implemented by subclasses)
-    public abstract void attack();
-    public abstract void specialMove();
+   
+    public abstract void attack(GameCharacter opponent);
+    public abstract void specialMove(GameCharacter opponent);
 
-    // Concrete method
-    public void showName() {
-        System.out.println("Character: " + name);
+    public boolean isAlive() {
+        return hp > 0;
+    }
+
+    public void showStatus() {
+        JOptionPane.showMessageDialog(null, name + " has " + hp + " HP left.");
     }
 }
